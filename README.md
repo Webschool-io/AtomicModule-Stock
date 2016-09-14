@@ -1,25 +1,23 @@
 # AtomicModule-Stock
 
-Módulo atômico para gerenciar as movimentações de produtos no estoque com Node.js
+  Módulo atômico para gerenciar as movimentações de produtos no estoque com Node.js
 
 ## Conceito
 
-Esse módulo deverá controlar as quantidades de produtos em estoque,
-esse módulo será chamado ao entrar(como num pedido de compras, por exemplo) ou sair(como na venda) algum produto do estoque para poder fazer então o devido ajuste no estoque.
+  Esse módulo deverá controlar as quantidades de produtos em estoque,
+  esse módulo será chamado ao entrar(como num pedido de compras, por exemplo) ou sair(como na venda) algum produto do estoque para poder fazer então o devido ajuste no estoque.
 
 ## Funcionalidades
 
-- Adicionar quantidades de produtos no estoque (entrada)
+  - Adicionar quantidades de produtos no estoque (entrada)
 
-- Remover quantidades de produtos no estoque (baixa)
+  - Remover quantidades de produtos no estoque (baixa)
 
-- Busca da quantidade em estoque de um determinado produto
-
+  - Busca da quantidade em estoque de um determinado produto
 
 ## Interface
 
-Aqui definimos a nomenclatura utilizada para cada funcionalidade, seus parâmetros e seu retorno:
-**Foi definido que 'todo' retorno de função será um objeto**
+  Aqui definimos a nomenclatura utilizada para cada funcionalidade, seus parâmetros e seu retorno:
 
 ### Adicionar quantidades de produtos no estoque (entrada)
 
@@ -82,3 +80,33 @@ Aqui definimos os tipos de objetos usados nesse módulo
   type: object
   schema:
   {}
+
+## Todo retorno de função será um objeto
+  **Objeto de retorno para functions SET**
+  {   
+          status: String
+      ,   message: String
+      ,   code: Number
+      ,   idTransaction: Number
+  }
+
+  - status: Status com mensagens padronizadas tipo: "success", "error" (ainda não definidas)
+  - message: Mensagem de retorno
+  - code:  códigos padrões à serem ainda definidos
+  - idTransaction: id da tentativa
+
+
+  **Objeto de retorno para functions GET**
+  {   
+          status: String
+      ,   message: String
+      ,   code: Number
+      ,   idTransaction: Number
+      ,   object: []
+  }
+
+  - status: Status com mensagens padronizadas tipo: "success", "error" (ainda não definidas)
+  - message: Mensagem de retorno
+  - code:  códigos padrões à serem ainda definidos
+  - idTransaction: id da tentativa
+  - object é array contendo os valores solicitados na função

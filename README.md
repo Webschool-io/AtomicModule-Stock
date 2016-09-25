@@ -21,17 +21,17 @@
 
 ### Adicionar quantidades de produtos no estoque (entrada)
 
-  - nome: setInStock
-  - parametros: {product}, qty
-    - product: objeto do tipo produto
-    - qty: quantidade (quantity), valor inteiro
-  - retorno: Object
-    - {   
-            status: String
-        ,   message: String
-        ,   code: Number
-        ,   idTransaction: Number
-      }
+      - nome: setInStock
+      - parametros: {product}, qty
+        - product: objeto do tipo produto
+        - qty: quantidade (quantity), valor inteiro
+      - retorno: Object
+        - {   
+                status: String
+            ,   message: String
+            ,   code: Number
+            ,   idTransaction: Number
+          }
 
 ### Remover quantidades de produtos no estoque (baixa)
 
@@ -52,26 +52,26 @@
   - parametros: {product}
     - product: objeto do tipo produto
   - retorno: Object
-        - {   
-                status: String
-            ,   message: String
-            ,   code: Number
-            ,   idTransaction: Number
-            ,   object: []
-          }
+    {   
+          status: String
+      ,   message: String
+      ,   code: Number
+      ,   idTransaction: Number
+      ,   object: []
+    }
 
 ## Tipos
 Aqui definimos os tipos de objetos usados nesse módulo
 
 ### stockType
 
-  type: object
-  schema:
-  {
-      product: {} //objeto productType
-      qtde: Number, //int
-      qtdMinima: Number, //int, default 10% da qtde
-  }
+  - type: object
+  - schema:
+    {
+        product: {} //objeto productType
+      , qtde: Number //int
+      , qtdMinima: Number //int, default 10% da qtde
+    }
 
 
 **Aqui será adicionado futuramente o TYPE de produto que as funções irão receber**
@@ -84,10 +84,10 @@ Aqui definimos os tipos de objetos usados nesse módulo
 ## Todo retorno de função será um objeto
   **Objeto de retorno para functions SET**
   {   
-          status: String
-      ,   message: String
-      ,   code: Number
-      ,   idTransaction: Number
+      status: String
+    , message: String
+    , code: Number
+    , idTransaction: Number
   }
 
   - status: Status com mensagens padronizadas tipo: "success", "error" (ainda não definidas)

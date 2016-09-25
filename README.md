@@ -83,7 +83,7 @@ Aqui definimos os tipos de objetos usados nesse módulo
 
 ## Todo retorno de função será um objeto
 ###Objeto de retorno para functions SET
-  - {   
+    {   
         status: String
       , message: String
       , code: Number
@@ -97,7 +97,7 @@ Aqui definimos os tipos de objetos usados nesse módulo
 
 
 ###Objeto de retorno para functions GET
-  - {   
+    {
             status: String
         ,   message: String
         ,   code: Number

@@ -26,12 +26,12 @@
         - product: objeto do tipo produto
         - qty: quantidade (quantity), valor inteiro
       - retorno: Object
-        - {   
-                status: String
-            ,   message: String
-            ,   code: Number
-            ,   idTransaction: Number
-          }
+        {
+            status: String
+          , message: String
+          , code: Number
+          , idTransaction: Number
+        }
 
 ### Remover quantidades de produtos no estoque (baixa)
 
@@ -40,25 +40,25 @@
         - product: objeto do tipo produto
         - qty: quantidade (quantity), valor inteiro
       - retorno: Object
-          - {   
-                  status: String
-              ,   message: String
-              ,   code: Number
-              ,   idTransaction: Number
-            }
+        {
+            status: String
+          , message: String
+          , code: Number
+          , idTransaction: Number
+        }
 
 ### Busca da quantidade em estoque de um determinado produto
   - nome: getStock
   - parametros: {product}
     - product: objeto do tipo produto
   - retorno: Object
-    - {   
-            status: String
-        ,   message: String
-        ,   code: Number
-        ,   idTransaction: Number
-        ,   object: []
-      }
+    {
+        status: String
+      , message: String
+      , code: Number
+      , idTransaction: Number
+      , object: []
+    }
 
 ## Tipos
 Aqui definimos os tipos de objetos usados nesse módulo
@@ -67,7 +67,7 @@ Aqui definimos os tipos de objetos usados nesse módulo
 
   - type: object
   - schema:
-  - {
+    {
         product: {} //objeto productType
       , qtde: Number //int
       , qtdMinima: Number //int, default 10% da qtde
@@ -78,8 +78,7 @@ Aqui definimos os tipos de objetos usados nesse módulo
 ### productType
 
   type: object
-  schema:
-  {}
+  schema: {}
 
 ## Todo retorno de função será um objeto
 ###Objeto de retorno para functions SET

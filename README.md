@@ -52,13 +52,13 @@
   - parametros: {product}
     - product: objeto do tipo produto
   - retorno: Object
-    {   
-          status: String
-      ,   message: String
-      ,   code: Number
-      ,   idTransaction: Number
-      ,   object: []
-    }
+    - {   
+            status: String
+        ,   message: String
+        ,   code: Number
+        ,   idTransaction: Number
+        ,   object: []
+      }
 
 ## Tipos
 Aqui definimos os tipos de objetos usados nesse módulo
@@ -67,7 +67,7 @@ Aqui definimos os tipos de objetos usados nesse módulo
 
   - type: object
   - schema:
-    {
+  - {
         product: {} //objeto productType
       , qtde: Number //int
       , qtdMinima: Number //int, default 10% da qtde
@@ -82,13 +82,13 @@ Aqui definimos os tipos de objetos usados nesse módulo
   {}
 
 ## Todo retorno de função será um objeto
-  **Objeto de retorno para functions SET**
-  {   
-      status: String
-    , message: String
-    , code: Number
-    , idTransaction: Number
-  }
+###Objeto de retorno para functions SET
+  - {   
+        status: String
+      , message: String
+      , code: Number
+      , idTransaction: Number
+    }
 
   - status: Status com mensagens padronizadas tipo: "success", "error" (ainda não definidas)
   - message: Mensagem de retorno
@@ -96,14 +96,14 @@ Aqui definimos os tipos de objetos usados nesse módulo
   - idTransaction: id da tentativa
 
 
-  **Objeto de retorno para functions GET**
-  {   
-          status: String
-      ,   message: String
-      ,   code: Number
-      ,   idTransaction: Number
-      ,   object: []
-  }
+###Objeto de retorno para functions GET
+  - {   
+            status: String
+        ,   message: String
+        ,   code: Number
+        ,   idTransaction: Number
+        ,   object: []
+    }
 
   - status: Status com mensagens padronizadas tipo: "success", "error" (ainda não definidas)
   - message: Mensagem de retorno
